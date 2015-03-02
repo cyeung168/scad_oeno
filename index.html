@@ -1,0 +1,254 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8" /> 
+	<title>Oeno</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 	 
+<link rel="apple-touch-icon-precomposed" href="images/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+	<link href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" rel="stylesheet" />
+	<link href="styles.css" rel="stylesheet" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script>
+		// all dialog buttons should close their parent dialog
+		$(".ui-dialog button").live("click", function() {		
+			$("[data-role='dialog']").dialog("close");		
+		});
+		$(document).on("mobileinit", function(){
+		  $.mobile.defaultPageTransition = "slide";
+		});
+	</script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script>// When ready...
+window.addEventListener("load",function() {
+  // Set a timeout...
+  setTimeout(function(){
+    // Hide the address bar!
+    window.scrollTo(0, 1);
+  }, 0);
+});</script>
+	<style>
+		#footerTabs {
+			background: #FFF -webkit-radial-gradient(circle, #FFF, #dee2e4);
+		}
+		.ui-listview sup {
+			font-size: 0.6em;
+			color: #cc0000;
+		}
+	</style>
+
+</head> 
+<body> 
+
+<div class="wrapper" data-role="page" id="activity"> 
+
+		<div data-role="header" data-theme="b" data-position="fixed">
+        	
+			<a href="#panel" data-theme="b"><img src="images/more_button.png" style="margin:-5px;"></a>
+			<h1>Oeno</h1>
+			<a href="#account" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+ 
+	<div data-role="content"> 
+    <div data-role="fieldcontain">
+    <select name="select-choice-1" id="select-choice-1">
+		<option value="all">All</option>
+        <option value="vineyards">Vineyards</option>
+		<option value="tours">Tours</option>
+		<option value="adventures">Adventures</option>
+		<option value="tastings">Tastings</option>
+		<option value="classes">Classes</option>
+		<option value="dining">Dining</option>
+    </select>
+</div>
+    <img src="images/activity-06.png" width="290" usemap="#clicked" style="margin:0; padding:0;">
+    <map name="clicked">
+      <area shape="rect" coords="1,73,287,155" href="#description" target="_self" alt="chaffeured wine country tour">
+    </map>
+    
+ 
+		</div><!-- /ui-body wrapper -->	
+</div><!-- /page --> 
+
+<div class="wrapper" data-role="page" id="description"> 
+		<div data-role="header" data-theme="b" data-position="fixed">
+        	
+			<a href="#" data-rel="back" data-theme="b">Back</a>
+			<h1>Oeno</h1>
+			<a href="#account" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+ 
+	<div data-role="content"> 
+    <img src="images/description.png" usemap="#directions" style="margin:-1.25em; padding:none; width:325px">
+    <map name="directions">
+      <area shape="rect" coords="24,361,303,456" href="#map" target="_self" alt="directions to private chaffeur tour">
+    </map>
+ 
+		</div><!-- /ui-body wrapper -->	
+        <div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#signin" id="tabA" data-icon="custom"></a></li>
+				<li><a href="#" id="tabB" data-icon="custom"></a></li>
+				<li><a href="#" id="tabC" data-icon="custom"></a></li>
+                <li><a href="#" id="tabD" data-icon="custom"></a></li>
+                <li><a href="#" id="tabE" data-icon="custom"></a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->  
+
+
+<div data-role="page" id="profile" style="background:#FFF"> 
+		<div data-role="header" data-theme="b" data-position="fixed">
+        	
+			<a href="#panel" data-theme="b"><img src="images/more_button.png" style="margin:-5px;"></a>
+			<h1>Profile</h1>
+			<a href="#overlay" data-theme="b">Save</a>
+		</div>
+ 
+<div data-role="content"> 
+<img src="images/profile-02.png" style="margin:-1.25em; padding:none; width:325px">
+ 
+		</div><!-- /ui-body wrapper -->	
+</div><!-- /page --> 
+
+<div data-role="page" id="signin" style="background:#F0F0F0;"> 
+		<div data-role="header" data-theme="b" data-position="fixed">
+        	
+			<a href="#" data-rel="back" data-theme="b">Back</a>
+			<h1>Oeno</h1>
+			<a href="#account" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;">
+		</div><br>
+	<div data-role="content">
+Let's get started!<br><br>
+    <center><a href="#profile"><img src="images/fb_button.png"></a>
+    </center><br>
+    <hr>
+    <p>No Facebook? Join using your email.</p>
+   <div data-role="fieldcontain">
+    <input type="text" name="name" id="name" value="" placeholder="Name" /><br>
+    <input type="email" name="email" id="email" value="" placeholder="Email" /><br>
+    <input type="password" name="password" id="password" value="" placeholder="Password"/>
+</div>
+ <center><img src="images/create-14.png" usemap="#create">
+ <map name="create">
+   <area shape="rect" coords="2,4,139,54" href="#profile" target="_self">
+ </map>
+		</div><!-- /ui-body wrapper -->	
+</div><!-- /page --> 
+
+<div data-role="page" id="map"> 
+		<div data-role="header" data-theme="b" data-position="fixed">
+        	
+			<a href="#" data-rel="back" data-theme="b">Back</a>
+			<h1>Oeno</h1>
+			<a href="#" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+ 
+	<div data-role="content"> 
+    <img src="images/map-08.png" style="margin:-1.25em; padding:none; width:325px">
+ 
+		</div><!-- /ui-body wrapper -->	
+ 
+</div><!-- /page -->  
+
+<div data-role="page" id="panel">        
+ 
+	<div data-role="content"> 
+    <img src="images/panel-12.png" usemap="#explore" style="margin:-1.25em; padding:none; width:325px">
+    <map name="explore">
+      <area shape="rect" coords="20,138,269,187" href="#activity" target="_self">
+      <area shape="rect" coords="20,231,267,277" href="#account" target="_self">
+      <area shape="rect" coords="23,24,263,132" href="#weather" target="_self">
+      <area shape="rect" coords="23,279,270,322" href="#profile" target="_self">
+      <area shape="rect" coords="24,186,269,229" href="#nearby" target="_self">
+      <area shape="rect" coords="275,2,322,44" href="#activity" target="_self">
+    </map>
+ 
+		</div><!-- /ui-body wrapper -->	
+      
+</div><!-- /page -->  
+
+<div data-role="page" id="map"> 
+		<div data-role="header" data-theme="b" data-position="fixed">
+        	
+			<a href="#" data-rel="back" data-theme="b">Back</a>
+			<h1>Oeno</h1>
+			<a href="#account" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+ 
+	<div data-role="content"> 
+    <img src="images/map-08.png" style="margin:-1.25em; padding:none; width:325px">
+ 
+		</div><!-- /ui-body wrapper -->	
+ 
+</div><!-- /page -->  
+
+<div data-role="page" id="overlay">        
+ 
+	<div data-role="content"> 
+    <img src="images/overlay-04.png" usemap="#overlay" style="margin:-1.25em; padding:none; width:325px">
+    <map name="overlay">
+      <area shape="rect" coords="39,299,286,339" href="#description" target="_self">
+    </map>
+		</div><!-- /ui-body wrapper -->	
+      
+</div><!-- /page --> 
+
+<div data-role="page" id="weather">        
+ 	<div data-role="header" data-theme="b" data-position="fixed">
+			<a href="#" data-rel="back" data-theme="b">Back</a>
+			<h1>Oeno</h1>
+			<a href="#profile" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+	<div data-role="content"> 
+    <img src="images/weather-09.png" style="margin:-1.25em; padding:none; width:325px">
+		</div><!-- /ui-body wrapper -->	
+      
+</div><!-- /page --> 
+
+<div data-role="page" id="account">        
+ 	<div data-role="header" data-theme="b" data-position="fixed">
+        	
+			<a href="#" data-rel="back" data-theme="b">Back</a>
+			<h1>Account</h1>
+			<a href="#account" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+	<div data-role="content"> 
+    <img src="images/account-07.png" usemap="#acct" style="margin:-1.25em; padding:none; width:325px">
+    <map name="acct">
+      <area shape="rect" coords="43,69,150,181" href="#account" target="_self">
+      <area shape="rect" coords="171,71,288,180" href="#itinerary" target="_self">
+      <area shape="rect" coords="177,322,287,431" href="#profile" target="_self">
+    </map>
+		</div><!-- /ui-body wrapper -->	
+      
+</div><!-- /page --> 
+
+<div data-role="page" id="itinerary">        
+ 	<div data-role="header" data-theme="b" data-position="fixed">
+        	<a href="#panel" data-theme="b"><img src="images/more_button.png" style="margin:-5px;"></a>
+			<h1>Trip</h1>
+			<a href="#account" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+	<div data-role="content"> 
+    <img src="images/itinerary-10.png" style="margin:-1.25em; padding:none; width:325px">
+		</div><!-- /ui-body wrapper -->	
+      
+</div><!-- /page --> 
+
+<div data-role="page" id="nearby">        
+ 	<div data-role="header" data-theme="b" data-position="fixed">
+        	<a href="#panel" data-theme="b"><img src="images/more_button.png" style="margin:-5px;"></a>
+			<h1>Trip</h1>
+			<a href="#account" data-theme="b"><img src="images/profile_button-02.png" style="margin:-5px;"></a>
+		</div>
+	<div data-role="content"> 
+    <img src="images/nearby-11.png" style="margin:-1.25em; padding:none; width:325px">
+		</div><!-- /ui-body wrapper -->	
+      
+</div><!-- /page --> 
+
+</body> 
+</html> 
